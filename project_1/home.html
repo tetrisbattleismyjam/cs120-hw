@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Home of the Jazzy G</title>
+        <style>
+            body {
+                background-color: black;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                display: flex;
+                flex-direction: column;}
+            .top {
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+                justify-content: space-between;
+            }
+            @media (max-width: 40rem) {
+                .top {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items:center;
+                }
+            }
+            
+            .band_name {
+                letter-spacing: 2px;
+                margin: 20px 30px;
+                font-size:20vp;
+                font-weight:bold;
+                flex:0 1 auto;
+            }
+            
+            .navigation {
+                flex:0 1 auto;
+                }
+
+            .nav_items {
+                padding: 0px 2px;
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            .nav_item  {
+                padding:2px;
+                margin:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top">
+            <div class="band_name">
+                <h1>Jazzy G</h1>
+            </div>
+            <nav class="navigation">
+                <ul class="nav_items">
+                    <a href=#top> <li class="nav_item">Home</li> </a>
+                    <a href=#> <li class="nav_item">Band</li> </a>
+                    <a href=shows.html> <li class="nav_item">Shows</li> </a>
+                    <a href=#> <li class="nav_item">Fanmail</li> </a>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <div class="card" id="intro">
+                <p>Quadruplets at birth. Jazz band by choice.</p>
+            </div>
+            <div class="card" id="kenny">
+                placeholder pic of kenny G.
+            </div>
+            <div class="card" id="shop">
+                placeholder for merch
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="socials">
+                <img class="social_icon" id="xanga" src="tbd">
+                <img class="social_icon" id="tumblr" src="tbd">
+                <img class="social_icon" id="myspace" src="tbd">
+                <img class="social_icon" id="AIM" src="tbd">
+            </div>
+            <div class="trademark">
+                <p>PROPERTY OF THE JAZZY G BROTHERS. ALL RIGHTS RESERVED</p>
+            </div>
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About moi</title>
+    <style>
+        body    {font-family:sans-serif;}
+        h1, h2  {color: #000000; margin-bottom: 30px}
+        .list   {padding:10px 20px 10px 35px}
+        .center {width: max-content; margin: 0 auto;}
+        .border {border: 1px solid}
+
+        body {position:relative; display: inline-flex; height:fit-content;}
+        aside {
+                flex-grow:0; 
+                flex-shrink:0;
+                position: relative; 
+                top:0px; right:0px; 
+                width:300px; 
+                background-color: blanchedalmond}
+        section {flex-grow:1; flex-shrink:1}
+        #lumpia, #lumpia_description{
+                display: inline-block;
+                height: 150px;
+                vertical-align: middle;
+                }
+        #lumpia {
+                width:250px;
+                background-image: url(images/lumpia.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;display:inline-block}
+        #lumpia_description { width: fit-content}
+
+        #tbl_books tbody>tr:nth-child(odd) {background-color: #cacaca}
+        #tbl_books img {max-width: 100%;}
+    
+        aside>* {position:fixed}
+        aside #content {font-size: 20px; top: 50px; right: 90px}
+        aside #socials {top: 100px; right:35px}
+        aside #socials img {width:30px; height:30px;}
+        aside form {display: inline-flex; top: 150px}
+        aside form >*{min-width: 85px}
+        div.column {display: flex; flex-direction: column; width: fit-content}
+        div.column * {
+                        box-sizing:border-box; 
+                        height: 21px; 
+                        padding: 1px; 
+                        margin: 1px}
+        div.left {text-align:right}
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Rafael Sotelo</h1>
+        <hr>
+        <h2>Getaways</h2>
+        Spain was great. Cured meats can be found anywhere.
+        <br/>
+        Philippines was great. Lumpia can be found everywhere.
+        <br/>
+        <hr>
+        <h2 class="center">Pet names</h2>
+        <ul class="center border list" >
+            <li>Ham the cat</li>
+            <li>Lumpia the fish</li>
+            <li>John the dog</li>
+            <li>Feather the bird</li>
+        </ul>
+        <hr>
+        <h2>Fav Restaurant</h2>
+        Nothing else to say, just go ahead and order.
+        <a href="https://dominos.com" target="_blank">Click to order</a>
+        <hr>
+        <h2>How to Eat Lumpia</h2>
+        <div id="lumpia">
+        </div>
+        <div id="lumpia_description">
+            <br/> Step 1: Dip in sweet and sour sauce.
+            <br/>Step 2: Lift from dipping sauce towards mouth.
+            <br/>Step 3: Open mouth.
+            <br/> Step 4: Insert lumpia into mouth.
+            <br/> Step 5: Close mouth and enjoy.
+            <br clear="all">
+        </div>
+        <hr>
+        <h2>Books</h2>
+        
+        <table border="1" id="tbl_books">
+            <caption> My favorite books growing up </caption>
+            <thead>        
+                <tr>
+                    <th>Name</th>
+                    <th>Cover</th>
+                    <th>Author</th>
+                    <th>Summary</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr>
+                    <td>The Bad Beginning</td>
+                    <td><img src="images/the_bad_beginning.jpg"></td>
+                    <td>Lemony Snicket</td>
+                    <td>Count Olaf's wedding is ruined by a left-handed signiture.</td>
+                </tr>
+                <tr>
+                    <td>The Reptile Room</td>
+                    <td><img src="images/the_reptile_room.jpg"></td>
+                    <td>Lemony Snicket</td>
+                    <td>Count Olaf's trip to Peru with the children is ruined by a venomous snake.</td>
+                </tr>
+                <tr>
+                    <td>The Wide Window</td>
+                    <td><img src="images/the_wide_window.jpg"></td>
+                    <td>Lemony Snicket</td>
+                    <td>Count Olaf's planned a lake trip with the kids, but leeches stop the fun.</td>
+                </tr>
+                <tr>
+                    <td>The Miserable Mill</td>
+                    <td><img src="images/the_miserable_mill.jpg"></td>
+                    <td>Lemony Snicket</td>
+                    <td>Count Olaf finds a new job at an optometry clinic, but a mishap at the mill leads to his unemployment.</td>
+                </tr>
+            <tbody>
+        </table>
+    </section>
+
+    <aside>
+        <div id="content">
+            CONTACT ME
+        </div>        
+        <div id="socials">
+            <a href="http://facebook.com"><img id="fb_icon" src="images/facebook_icon.png"></a>
+            <a href="http://twitter.com"><img id="twitter_icon" src="images/twitter_icon.png"></a>
+        </div>
+        <form id="contacts" action='#' method='get'>
+            <div class="column left">
+                <label for="first_name">First Name: </label>
+                <label for="last_name">Last Name:</label>
+                <label for="city">City:</label>
+                <label for="state">State:</label>
+            </div>
+            <div class="column right">
+                <input type="text" id="first_name" name="first">
+                <input type="text" id="last_name" name="last">
+                <input type="text" id="city" name="city">
+                <select id="state" name="state">
+                    <option value="WA">Washington</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="SW">A Southwest State</option>
+                    <option value="SE">A Southeast State</option>
+                    <option value="PNW">Other Pacific Northwest State</option>
+                    <option value="EC">Other East Coast State</option>
+                    <option value="OPTOUT">Nunya Bizzness</option>
+            </div>
+        <input type ="submit" value = "Go!">
+           
+        </form>
+    </aside>
+</body>
+</html>
