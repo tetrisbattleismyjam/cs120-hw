@@ -1,24 +1,67 @@
 <html>
     <head>
         <title>TOUR BINGO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/sampler.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/body.css">
+        <link rel="stylesheet" href="css/links.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <style>
+            table {
+                border-style:solid;
+                text-wrap:wrap;
+            }
+            table * {
+                font-size: 2vw;
+            }
+            table th{
+                border-style:solid;
+                width:10vw;
+                height:10vw;
+            }
+            table tbody *{
+                font-weight:lighter;
+            }
+        </style>
     </head>
     <body>
-        <div class="top">
-            <div class="band_name">
-                <h1>Jazzy G</h1>
+        <div class="top" id="visible">
+            <div class="name_container">
+                <h1 id="band_name">Jazzy G</h1>
             </div>
             <nav class="navigation">
                 <ul class="nav_items">
                     <a href=home.html> <li class="nav_item">Home</li> </a>
-                    <a href=#> <li class="nav_item">Band</li> </a>
+                    <a href=band.html> <li class="nav_item">Band</li> </a>
                     <a href=shows.html> <li class="nav_item">Shows</li> </a>
-                    <a href=#top> <li class="nav_item">Fanmail</li> </a>
+                    <a href=fanmail.html> <li class="nav_item">Fanmail</li> </a>
+                    <a href=bingo.html> <li class = "nav_item">Bingo</li></a>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="top" id="hidden">
+            <div class="name_container">
+                <h1 id="band_name">Jazzy G</h1>
+            </div>
+            <nav class="navigation">
+                <ul class="nav_items">
+                    <ul class="nav_items">
+                        <a href=home.html> <li class="nav_item">Home</li> </a>
+                        <a href=band.html> <li class="nav_item">Band</li> </a>
+                        <a href=shows.html> <li class="nav_item">Shows</li> </a>
+                        <a href=fanmail.html> <li class="nav_item">Fanmail</li> </a>
+                        <a href=bingo.html> <li class = "nav_item">Bingo</li></a>
+                    </ul>
                 </ul>
             </nav>
         </div>
 
         <div class="content">
-            <h2>TOUR BINGO</h2>
+            <div class="intro card">
+                <h2>2024 BINGO CARD</h2>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -31,39 +74,39 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th>Lenny crowdsurfs</th>
+                        <th>Blue ax</th>
+                        <th>Fan kicked out</th>
+                        <th>Fan goes mild</th>
+                        <th>Fan goes wild</th>
                     </tr>
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th>Kenny's late</th>
+                        <th>Kenny crowdsurfs</th>
+                        <th>Red sax</th>
+                        <th>Mic malfunction</th>
+                        <th>Penny brings up fan</th>
                     </tr>
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th id="center"></th>
-                        <th></th>
-                        <th></th>
+                        <th>Gold sax</th>
+                        <th>Benny crowdsurfs</th>
+                        <th id="center">FREE</th>
+                        <th>Lenny's late</th>
+                        <th>Mic drop</th>
                     </tr>
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th>Black fedora</th>
+                        <th>Penny's late</th>
+                        <th>Penny crowdsurfs</th>
+                        <th>Kenny throws sax</th>
+                        <th>White fedora</th>
                     </tr>
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th>Benny's late</th>
+                        <th>Straw fedora</th>
+                        <th>Penny buffs sax</th>
+                        <th>Loose sax reed</th>
+                        <th>Lenny's late</th>
                     </tr>
                 </tbody>
             </table>
@@ -71,15 +114,21 @@
 
         <div class="footer">
             <div class="socials">
-                <img class="social_icon" id="xanga" src="tbd">
-                <img class="social_icon" id="tumblr" src="tbd">
-                <img class="social_icon" id="myspace" src="tbd">
-                <img class="social_icon" id="AIM" src="tbd">
+                <img class="social_icon" id="xanga" src="images/xanga_icon.png">
+                <img class="social_icon" id="tumblr" src="images/tumblr_icon.png">
+                <img class="social_icon" id="myspace" src="images/myspace_icon.png">
+                <img class="social_icon" id="AIM" src="images/aim_icon.png">
             </div>
             <div class="trademark">
-                <p>PROPERTY OF THE JAZZY G BROTHERS. ALL RIGHTS RESERVED</p>
+                <p>NOT ACTUAL PROPERTY OF THE JAZZY G BROTHERS. NO RIGHTS RESERVED</p>
             </div>
 
+        </div>
+
+        <div class="sampler">
+            <a target="_blank" href="https://www.youtube.com/watch?v=CZJffC5Qwtw">
+                <img src="images/headphone_icon.png">
+            </a>
         </div>
 
     </body>

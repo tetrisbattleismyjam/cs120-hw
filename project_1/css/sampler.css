@@ -1,0 +1,10 @@
+.sampler{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+}
+
+.sampler img{
+    height:5vw;
+    width:auto;
+}

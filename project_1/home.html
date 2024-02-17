@@ -1,91 +1,82 @@
 <html>
     <head>
+        
         <title>Home of the Jazzy G</title>
-        <style>
-            body {
-                background-color: black;
-                font-family: Georgia, 'Times New Roman', Times, serif;
-                color: white;
-                display: flex;
-                flex-direction: column;}
-            .top {
-                display: flex;
-                flex-direction: row;
-                align-items: baseline;
-                justify-content: space-between;
-            }
-            @media (max-width: 40rem) {
-                .top {
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items:center;
-                }
-            }
-            
-            .band_name {
-                letter-spacing: 2px;
-                margin: 20px 30px;
-                font-size:20vp;
-                font-weight:bold;
-                flex:0 1 auto;
-            }
-            
-            .navigation {
-                flex:0 1 auto;
-                }
-
-            .nav_items {
-                padding: 0px 2px;
-                list-style-type: none;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-            }
-            .nav_item  {
-                padding:2px;
-                margin:5px;
-            }
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/sampler.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/body.css">
+        <link rel="stylesheet" href="css/links.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/home.css">
     </head>
     <body>
-        <div class="top">
-            <div class="band_name">
-                <h1>Jazzy G</h1>
+        <div class="top" id="visible">
+            <div class="name_container">
+                <h1 id="band_name">Jazzy G</h1>
             </div>
             <nav class="navigation">
                 <ul class="nav_items">
-                    <a href=#top> <li class="nav_item">Home</li> </a>
-                    <a href=#> <li class="nav_item">Band</li> </a>
+                    <a href=home.html> <li class="nav_item">Home</li> </a>
+                    <a href=band.html> <li class="nav_item">Band</li> </a>
                     <a href=shows.html> <li class="nav_item">Shows</li> </a>
-                    <a href=#> <li class="nav_item">Fanmail</li> </a>
+                    <a href=fanmail.html> <li class="nav_item">Fanmail</li> </a>
+                    <a href=bingo.html> <li class = "nav_item">Bingo</li></a>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="top" id="hidden">
+            <div class="name_container">
+                <h1 id="band_name">Jazzy G</h1>
+            </div>
+            <nav class="navigation">
+                <ul class="nav_items">
+                    <ul class="nav_items">
+                        <a href=home.html> <li class="nav_item">Home</li> </a>
+                        <a href=band.html> <li class="nav_item">Band</li> </a>
+                        <a href=shows.html> <li class="nav_item">Shows</li> </a>
+                        <a href=fanmail.html> <li class="nav_item">Fanmail</li> </a>
+                        <a href=bingo.html> <li class = "nav_item">Bingo</li></a>
+                    </ul>
                 </ul>
             </nav>
         </div>
 
         <div class="content">
-            <div class="card" id="intro">
-                <p>Quadruplets at birth. Jazz band by choice.</p>
-            </div>
-            <div class="card" id="kenny">
-                placeholder pic of kenny G.
-            </div>
-            <div class="card" id="shop">
-                placeholder for merch
-            </div>
+            <div class="banner" id="top_banner"></div>
+            <p class="motivation">EXPERIENCE THE SWEET CARESS OF WARM MELODIES</p>
+            <div class="banner" id="middle_banner"></div>
+            <p class="motivation">ESCAPE TO THE SOOTHING LANDSCAPE OF BEAUTIFUL HARMONIES</p>
+            <div class="banner" id="bottom_banner"></div>
+            <section class="mailing_list">
+                <h2>Subscribe to keep updated!</h2>
+                <form method="get" action="#">
+                    <label for="email">E-Mail:</label>
+                    <input type="text" id="email">
+                    <br/>
+                    <input type="submit" value="Subscribe now!">
+                </form>
+            </section>
         </div>
 
         <div class="footer">
             <div class="socials">
-                <img class="social_icon" id="xanga" src="tbd">
-                <img class="social_icon" id="tumblr" src="tbd">
-                <img class="social_icon" id="myspace" src="tbd">
-                <img class="social_icon" id="AIM" src="tbd">
+                <img class="social_icon" id="xanga" src="images/xanga_icon.png">
+                <img class="social_icon" id="tumblr" src="images/tumblr_icon.png">
+                <img class="social_icon" id="myspace" src="images/myspace_icon.png">
+                <img class="social_icon" id="AIM" src="images/aim_icon.png">
             </div>
             <div class="trademark">
-                <p>PROPERTY OF THE JAZZY G BROTHERS. ALL RIGHTS RESERVED</p>
+                <p>NOT ACTUAL PROPERTY OF THE JAZZY G BROTHERS. NO RIGHTS RESERVED</p>
             </div>
 
         </div>
 
+        <div class="sampler">
+            <a target="_blank" href="https://www.youtube.com/watch?v=CZJffC5Qwtw">
+                <img src="images/headphone_icon.png">
+            </a>
+        </div>
     </body>
 </html>

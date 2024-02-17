@@ -1,0 +1,47 @@
+.top{
+    width:100%;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top#visible{
+    position:fixed;
+    background-color:#1F0812;
+    color: #F3B3A6;
+    z-index: 9999;
+}
+
+.name_container {
+    flex:1 1 auto;
+}
+
+.navigation {
+    flex:0 1 auto;
+}
+
+#band_name {
+    letter-spacing: 2px;
+    min-width:fit-content;
+    margin: 20px 30px;
+    font-size:12vmin;
+    font-weight:bold;
+    text-wrap:nowrap;
+}
+
+.nav_items {
+    padding: 0px 2px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.nav_item  {
+    padding:0px 10px;
+    margin:3px;
+    font-size:3vmin;
+    color: #F3B3A6;
+}

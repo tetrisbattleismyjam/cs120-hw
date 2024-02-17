@@ -1,24 +1,72 @@
 <html>
     <head>
-        <title>UPCOMING SHOWS</title>
+        
+        <title>Gs of Jazzy G</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/sampler.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/body.css">
         <link rel="stylesheet" href="css/links.css">
         <link rel="stylesheet" href="css/footer.css">
-        
         <style>
-            .intro.card{
-                margin-bottom: 0px;
+            .bio.card{
+                box-sizing:border-box;
+                height:fit-content;
+                width:60vw;
+                padding:10px 50px;
+                justify-content:center;
+                display:flex;
+                flex-direction:row;
             }
-            .banner{
+            p.bio{
+                box-sizing:border-box;
+                height:fit-content;
                 width:100%;
-                height:20vw;
-                background-image: url(images/banners/kenny_g_background.jpg);
-                background-size:cover;
-                background-position:left 30%
+                margin:auto auto 5vw;
+                text-align:center;
+                font-size: 9vmin;
+                color:#F3B3A6;
+                background-color:#1F0812;
             }
+            img.bio{
+                height:400px;
+                width:400px;
+            }
+            img.bio.left{
+                box-shadow: -15px 10px 20px #1F0812;
+            }
+            img.bio.right{
+                box-shadow: 15px 10px 20px #1F0812;
+            }
+            .bio.card>.bio.left{
+                order:1;
+            }
+            .bio.card>.bio.right{
+                order:2;
+            }
+
+            @media (max-width: 1220px){
+                .bio.card {
+                    width:60vw;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content: center;
+                    align-items: center;
+                    padding:10px 10px;
+                }
+
+                .bio.card>img.bio{
+                    margin: 0px auto 12px;
+                    height:40vw;
+                    width:40vw;
+                    order:1;
+                }
+
+                .bio.card>.bio.left, .bio.card>.right{
+                    order:2;
+                }
+            }
+
         </style>
     </head>
     <body>
@@ -56,25 +104,24 @@
 
         <div class="content">
             <div class="intro card">
-                <h2>JAZZY G RODEO TOUR</h2>
+                <h2>MEET THE BAND</h2>
             </div>
-            <div class="banner"></div>
-            <article class="show" id="1">
-                <h2>DALLAS, TEXAS</h2>
-                <h3>August 22, 2024 - 5PM</h3>
-            </article>
-            <article class="show" id="2">
-                <h2>HOUSTON, TEXAS</h2>
-                <h3>December 22, 2025 - 11PM</h3>
-            </article>
-            <article class="show" id="3">
-                <h2>SAN ANTONIO, TEXAS</h2>
-                <h3>January 01, 2026 - 2AM</h3>
-            </article>
-            <article class="show" id="4">
-                <h2>EL PASO, TEXAS</h2>
-                <h3>August 22, 2026 - 5:27PM</h3>
-            </article>
+            <div class="bio card" id="kenny_card">
+                <img class="bio left"src="images/kenny1.jpg">
+                <p class="bio right">Kenny G</p>
+            </div>
+            <div class="bio card" id="lenny">
+                <img class="bio right"src="images/kenny2.jpg">
+                <p class="bio left">Lenny G</p>
+            </div>
+            <div class="bio card" id="benny">
+                <img class="bio left"src="images/kenny3.jpg">
+                <p class="bio right">Benny G</p>
+            </div>
+            <div class="bio card" id="penny">
+                <img class="bio right"src="images/kenny4.jpg">
+                <p class="bio left">Penny G</p>
+            </div>
         </div>
 
         <div class="footer">

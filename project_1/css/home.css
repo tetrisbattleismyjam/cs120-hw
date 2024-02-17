@@ -1,0 +1,23 @@
+.banner{
+    background-size:cover;
+    background-repeat:no-repeat;
+    width:100%;
+    height:30vw;
+}
+#top_banner{
+    background-image: url(../images/banners/kenny_g_hero.jpg);
+    background-position-y:-0%;
+}
+#middle_banner{
+    background-image: url(../images/banners/kenny_g_background_2.jpg);
+    background-position-y:20%;
+}
+#bottom_banner{
+    background-image: url(../images/banners/kenny_g_background_3.jpg);
+    background-position-y:20%;
+}
+.motivation{
+    font-size:5vw;
+    padding:1vw 10vw;
+}
+
