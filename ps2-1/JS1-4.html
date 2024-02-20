@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PROBLEM SET 2-1</title>
+
+    </head>
+    <body>
+
+        <script>
+            first = parseInt(prompt("give me a number"))
+            second = parseInt(prompt("give me another number"))
+            sum = 0;
+
+            for (i = first; i <= second; i++) {
+                if (i % 2 != 0) {
+                    document.write(i + "<br/>")
+                    sum += parseInt(i);
+                }
+                
+            }
+            document.write("YOUR TOTAL IS: " + sum)
+
+        </script>
+    </body>
+</html>
