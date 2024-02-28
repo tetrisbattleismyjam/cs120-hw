@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Problem Set 2</title>
+    </head>
+    <body>
+        <form id="frm_callbox">
+            <input type="text" id="name_input">
+            <button type="button" id="hello" onclick="speak('Hello')">Hello</button>
+            <button type="button" id="greetings" onclick="speak('Greetings')">Greetings</button>
+            <button type="button" id="goodbye" onclick="speak('Good Bye')">Good bye</button>
+        </form>
+
+        <script>
+            function speak(prefix){
+                alert(prefix + " " + document.getElementById("name_input").value)
+            }
+        </script>
+    </body>
+</html>

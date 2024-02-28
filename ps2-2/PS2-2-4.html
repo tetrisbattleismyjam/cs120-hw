@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Problem Set 2</title>
+        <script>
+            window.onload = function() {
+                for (b of document.getElementsByClassName("speaker")) {
+                    b.onclick=speak
+                }
+
+                function speak(){
+                    alert(this.innerHTML + " " + document.getElementById("name_input").value)
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <form id="frm_callbox">
+            <input type="text" id="name_input">
+            <button type="button" class="speaker" id="hello">Hello</button>
+            <button type="button" class="speaker" id="greetings">Greetings</button>
+            <button type="button" class="speaker" id="goodbye">Good bye</button>
+        </form>
+
+
+    </body>
+</html>

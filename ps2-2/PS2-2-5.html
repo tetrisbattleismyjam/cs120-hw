@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Problem Set 2</title>
+        <style>
+            #state_select {width:100px}
+            #chosen_states {border-style: solid; height:300px; width:200px}
+        </style>
+    </head>
+    <body>
+        <select size="10" default="1" id="state_select"></select>
+        <button type="button" onclick="add_state()">Add State</button>
+        <button type="button" onclick="reset_states()">Clear States</button>
+        <div><ol id="chosen_states"></ol></div>
+        
+        <script>
+            window.onload=reset_states
+            select_element = document.getElementById("state_select")
+            list_element = document.getElementById("chosen_states")
+
+            function reset_states(){
+                states = ["Fear", "Anger", "Joy", "Sad", "Contempt" ,
+                        "Disgust", "Surprise", "Gas", "Liquid", "Solid"]
+                
+                list_element.innerHTML=""
+                select_element.innerHTML=""
+                for (state of states) {
+                    option="<option id='" + state + "'>" + state + "</option>"
+                    select_element.innerHTML+= option
+                }
+
+                select_element.firstElementChild.selected=true
+            }
+
+            function add_state(){
+                state_option = select_element.options[select_element.selectedIndex]
+                state = state_option.id
+                state_option.remove()
+                select_element.firstElementChild.selected=true
+
+                html = "<li>" + state  + "</li>"
+                list_element.innerHTML +=html
+            }
+        </script>
+    </body>
+</html>
