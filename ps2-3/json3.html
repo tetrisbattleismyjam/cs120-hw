@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Problem Set 2-3</title>
+        <style>
+            body {display: flex; flex-direction: row;}
+            body>*{width:300px; margin:20px}
+            span.title{font-weight:bold}
+        </style>
+        <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   
+        crossorigin="anonymous"></script>
+
+        <script language="javascript">
+            function classify(str) {
+                return str.replace(" ", "_")
+            }
+
+            function filter(){
+                genre = $("#filter option:selected").text()
+                genre = classify(genre)
+                if (genre == "All") {
+                    $(".song").show()
+                }
+                else {
+                    $(".song"+"."+genre).show()
+                    $(".song").not("." + genre).hide()
+                }
+            }
+
+            function make_select(genres){
+                        str = "Filter: <select id='filter'> <option>All</option>"
+                        genres.forEach((g)=> str += "<option>" + g + "</option>")
+                        str += "</select>"
+                        $("#select_filter").html(str)
+                        $("#filter").change(filter)
+            }
+
+            $.get("https://tetrisbattleismyjam.github.io/cs120-hw/ps2-3/songs.json", 
+                    function(data){
+                        genres = new Set()
+                        songs = data
+                        str = ""
+                        data.forEach(function(song){
+                                        genre_classes = ""
+                                        song.genre.forEach(function(g){
+                                                        genre_classes += classify(g) + " "
+                                                        genres.add(g)})
+
+                                        str += "<div class='song "+ genre_classes + "'>" +
+                                                "<span class='title'>" + song.title + "</span></br>" +
+                                                "Artist: " + song.artist + "</br>" + 
+                                                "Genre: " + song.genre.join(", ") + "</br>" +
+                                                "Released " + song.year + "</br></br>" +
+                                                "</div>"
+                                        })
+
+                        $("#songs").html(str)
+                        make_select(genres)
+                        
+                    })
+            
+        </script>
+    </head>
+    <body>
+        <div id="songs">
+
+        </div>
+        <div id="select_filter">
+
+        </div>
+    </body>
+</html>
