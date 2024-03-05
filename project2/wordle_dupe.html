@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Wordle but not wordle</title>
+        <script src="wordle.js"></script>
+        <link rel="stylesheet" href="wordle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="gameboard">
+            <script>
+                // Fill in gameboard
+
+                gameboard = document.getElementById("gameboard")
+    
+                for (i=0; i < attempts; i++){
+                    e = "<div class='attempt_container' id=" + i +"></div>"
+                    gameboard.innerHTML += e
+                }
+    
+                for (container of document.getElementsByClassName("attempt_container")) {
+                    for (i=0; i < letter_count; i++) {
+                        e = "<div class='letter' id=" + i + "></div>"
+                        container.innerHTML += e
+                    }
+                }
+
+                e ='<input type="text" id="guess" pattern="[A-Za-z]{"' + letter_count + '}>'
+                gameboard.innerHTML += e
+            </script>
+        </div>
+    </body>
+</html>

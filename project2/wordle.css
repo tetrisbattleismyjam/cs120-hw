@@ -1,0 +1,32 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+#gameboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.attempt_container{
+    display: flex;
+    
+}
+.letter{
+    border:1px solid rgb(175, 175, 175);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: "Karla", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    width: 60px;
+    height: 70px;
+    margin: 3px;
+}
