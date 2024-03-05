@@ -5,13 +5,15 @@
         <style>
             body {display: flex; flex-direction: row;}
             body>*{width:300px; margin:20px}
-            span.title{font-weight:bold}
+            div.title{font-weight:bold}
         </style>
         <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   
         crossorigin="anonymous"></script>
 
         <script language="javascript">
+            window.onload=()=>{$("#btnFilter").click(filter)}
+
             function classify(str) {
                 return str.replace(" ", "_")
             }
@@ -19,21 +21,16 @@
             function filter(){
                 genre = $("#filter option:selected").text()
                 genre = classify(genre)
-                if (genre == "All") {
-                    $(".song").show()
-                }
-                else {
-                    $(".song"+"."+genre).show()
-                    $(".song").not("." + genre).hide()
-                }
+                titles = $(".song." + genre + ">.title").clone()
+                $("#selected_songs").empty()
+                $("#selected_songs").append(titles)
             }
 
             function make_select(genres){
-                        str = "Filter: <select id='filter'> <option>All</option>"
+                        str = "<select id='filter'> <option>None</option>"
                         genres.forEach((g)=> str += "<option>" + g + "</option>")
                         str += "</select>"
-                        $("#select_filter").html(str)
-                        $("#filter").change(filter)
+                        $("#select_filter").prepend(str)
             }
 
             $.get("https://tetrisbattleismyjam.github.io/cs120-hw/ps2-3/songs.json", 
@@ -48,10 +45,10 @@
                                                         genres.add(g)})
 
                                         str += "<div class='song "+ genre_classes + "'>" +
-                                                "<span class='title'>" + song.title + "</span></br>" +
-                                                "Artist: " + song.artist + "</br>" + 
-                                                "Genre: " + song.genre.join(", ") + "</br>" +
-                                                "Released " + song.year + "</br></br>" +
+                                                "<div class='title'>" + song.title + "</div>" +
+                                                "<div class='artist'>Artist: " + song.artist + "</div>" + 
+                                                "<div class='genre'>Genre: " + song.genre.join(", ") + "</div>" +
+                                                "<div class='year'>Released " + song.year + "</div></br>" +
                                                 "</div>"
                                         })
 
@@ -66,8 +63,12 @@
         <div id="songs">
 
         </div>
-        <div id="select_filter">
+        <form id="select_filter">
+            <button id="btnFilter" type="button">Filter</button>
+            <div id="selected_songs">
 
-        </div>
+            </div>
+        </form>
+
     </body>
 </html>
