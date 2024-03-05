@@ -27,7 +27,7 @@
     "title": "I Wanna Know",
     "artist": "Joe",
     "year": 1999,
-    "genre": ["R&B"]
+    "genre": ["RnB"]
     },
     {
     "title": "Everything You Want",
@@ -39,7 +39,7 @@
     "title": "Say My Name",
     "artist": "Destiny's Child",
     "year": 1999,
-    "genre": ["R&B", "Pop"]
+    "genre": ["RnB", "Pop"]
     },
     {
     "title": "I Knew I Loved You",
@@ -63,6 +63,6 @@
     "title": "He Wasn't Man Enough",
     "artist": "Toni Braxton",
     "year": 2000,
-    "genre": ["R&B"]
+    "genre": ["RnB"]
     }
 ]
