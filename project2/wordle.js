@@ -7,9 +7,14 @@ letter_count = 5
 attempt_counter = 0
 letter_counter = 0
 guess = ""
-addEventListener("keyup",handle_key)
+answer = ""
+addEventListener("keydown",handle_key)
 
 function handle_key(event) {
+    if (event.repeat) {
+        return
+    }
+
     key = event.key
     if (isLetter(key) && letter_counter < letter_count) {
         add_letter(key)
@@ -46,10 +51,28 @@ function remove_letter(key) {
 }
 
 function current_container() {
-    console.log(attempt_counter + ", " + letter_counter)
-    return $(".attempt_container#" + attempt_counter).children("#" + letter_counter)
+    console.log($(".attempt_container").eq(attempt_counter).children(".letter").eq(letter_counter))
+    return $(".attempt_container").eq(attempt_counter).children(".letter").eq(letter_counter)
 }
 
 function isLetter(key){
     return (key.length == 1) && ((key >= "a" && key <="z") || (key >= "A" && key <= "Z"))
+}
+
+function get_word() {
+    url = "https://random-word-api.herokuapp.com/word?letter=5"
+
+    req = new XMLHttpRequest()
+    
+    req.onreadystatechange = function(){
+        console.log("ready: " + this.readyState)
+        console.log("status: " + this.status)
+        if (this.readyState == 4 && this.status == 200) {
+            console.log("in status")
+            console.log(this.responseText)
+        }
+    }
+    req.open("GET", url, true)
+
+    req.send()
 }
